@@ -1,0 +1,10 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+    - name: Making directories
+      command: mkdir /home/ansible/"{{ item }}"
+      with_items:
+        - mk_dir1
+        - mk_dir2
+        - mk_dir3

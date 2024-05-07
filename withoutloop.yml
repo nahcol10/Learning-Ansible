@@ -1,0 +1,10 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+     - name: making dir1
+       command: mkdir /home/ansible/dir1
+     - name: making dir2
+       command: mkdir /home/ansible/dir2
+     - name: making dir3
+       command: mkdir /home/ansible/dir3

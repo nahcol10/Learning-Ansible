@@ -1,0 +1,13 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: if myfile exit in the /tmp the copy content else ignore it
+    copy:
+      dest: /tmp/myfile.txt
+      content: " Hey, I am learning when in yaml "
+    when: true
+
+# RUN THIS CODE
+# ansible-playbook --ask-become-pass when.yml 
+

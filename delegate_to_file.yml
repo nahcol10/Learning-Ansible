@@ -1,0 +1,7 @@
+---
+- name: This is a play
+  hosts: all
+  tasks:
+    - name: Using the delegate_to module
+      command: touch /tmp/myfile.txt
+      delegate_to: demo

@@ -1,0 +1,11 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+    - name: copy file from mainserver to node
+      copy:
+        src: /home/ansible/abc.txt
+        dest: /tmp
+
+    - name: create directory for YAML files
+      command: mkdir /tmp/yamlfiles

@@ -1,0 +1,11 @@
+---
+- hosts: all
+  become: yes
+  vars:
+     my_var: "lochan paudel using variable in yaml"
+  tasks:
+   - name: Copy file using variable
+     copy:
+      dest: /tmp/myvariable.txt
+      content: "{{ my_var }}"
+

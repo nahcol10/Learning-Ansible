@@ -1,12 +1,13 @@
 ---
-- hosts: demo[0]
+- hosts: all
+  connection: ssh
   become: true
   tasks:
 
     - name: update the package
       apt:
         update_cache: yes
-    - name: install apache2 package 
+    - name: install apache2 package
       apt:
         name: apache2
-        state: latest 
+        state: present

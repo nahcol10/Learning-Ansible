@@ -1,0 +1,10 @@
+---
+- hosts: all
+  tasks:
+    - name: register module is used to store the response of any other module
+      command: mkdir /home/ansible/my_new_dir
+      register: store_the_response_of_command_module
+
+    - name: To print the value stored in the register
+      debug:
+        msg: "{{ store_the_response_of_command_module }}"

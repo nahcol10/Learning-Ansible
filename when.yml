@@ -1,6 +1,6 @@
 ---
 - hosts: all
-  become: yes
+#  become: yes
   tasks:
   - name: if myfile exit in the /tmp the copy content else ignore it
     copy:
@@ -10,4 +10,7 @@
 
 # RUN THIS CODE
 # ansible-playbook --ask-become-pass when.yml 
+
+# if you donot include become:yes then use the below key
+#ansible-playbook when.yml
 

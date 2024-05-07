@@ -1,0 +1,12 @@
+---
+- name: Play1
+  hosts: all
+  become: yes
+  vars_prompt:
+     name: var1
+     prompt: Enter any thing ?
+  #task1
+  tasks:
+   - name: Print the input data
+     debug:
+        msg: "You have entered {{ var1 }}"

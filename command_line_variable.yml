@@ -1,0 +1,16 @@
+---
+- hosts: all
+  become: yes
+#  vars:
+#    - name
+ #   - age
+
+  tasks:
+    - name: printing the value you entered using command line variable
+      debug:
+          msg: "Your name is {{ name }} and your age is {{ age }}"
+
+
+# TO RUN USE THIS COMMAND:
+#ansible-playbook --ask-become-pass command_line_variable.yml -e " name=lochan age=18"
+

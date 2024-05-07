@@ -1,0 +1,11 @@
+---
+- hosts: all
+  become: yes
+  vars_prompt:
+    name: var1
+    prompt: Enter your name ?
+  tasks:
+   - name: Copying the user entered value into variable
+     copy:
+       dest: /tmp/input.txt
+       content: "{{ var1 }}"

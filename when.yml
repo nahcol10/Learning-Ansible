@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: demo
 #  become: yes
   tasks:
   - name: if myfile exit in the /tmp the copy content else ignore it
